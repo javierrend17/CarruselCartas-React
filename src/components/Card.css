@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.cardContainer{
+    padding: 0px 11px;
+}
+  
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    background-color: rgb(128, 130, 141);
+    color: black;
+    border-radius: 45px;
+    
+}
+  
+.card p{
+    font-size: 40px;
+    cursor:default;
+    color: rgb(255, 255, 255);
+}
+  
+.card button{
+    all: unset;
+    background-color: rgb(84, 87, 89);
+    color: white;
+  
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
+.card button:hover{
+    background-color: rgb(96, 98, 99);
+}
+  
+.card img{
+    height: 350px;
+    pointer-events: none;
+}
