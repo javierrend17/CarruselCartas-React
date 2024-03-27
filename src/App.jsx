@@ -1,10 +1,15 @@
 import './App.css'
 import { Card } from './components/Card'
-import { useState } from 'react'
+import { createContext, useState } from 'react'
+import { Indicator } from './components/indicator/Indicator';
 
-function App() {
+export const MyContext = createContext();
+
+function App(){
   
   const [moveCount, setMoveCount] = useState(0);
+  
+  
 
   const handleMoveRight = () =>{
     if (moveCount < 4){
@@ -21,7 +26,7 @@ function App() {
   const moveAmount = 422;
 
   return (
-    <>
+    <MyContext.Provider value={moveCount}>
       <div className='todo'>
         <h1>Esta es una prueba para hacer un carrusel</h1>
         <div className='carruselContainer'>
@@ -59,8 +64,12 @@ function App() {
           </div>
           
         </div>
+
+        <Indicator></Indicator>
+
       </div>
-    </>
+    </MyContext.Provider>
+    
   )
 }
 
